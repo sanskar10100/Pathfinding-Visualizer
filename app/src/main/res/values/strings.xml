@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Pathfinding Visualizer</string>
+    <string name="app_name">Pathfinder</string>
     <string name="solveBfs">BFS</string>
     <string name="solveDfs">DFS</string>
     <string name="reset">RESET</string>
