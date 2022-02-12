@@ -1,4 +1,4 @@
-package com.example.pathfindingvisualizer
+package com.pranjal.pathfindingvisualizer
 
 import android.graphics.Color
 import android.os.Bundle
@@ -6,8 +6,8 @@ import android.view.Gravity
 import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
-import com.example.pathfindingvisualizer.pathBoard.PathGrid
-import com.example.pathfindingvisualizer.pathFinder.PathFinder
+import com.pranjal.pathfindingvisualizer.pathBoard.PathGrid
+import com.pranjal.pathfindingvisualizer.pathFinder.PathFinder
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch

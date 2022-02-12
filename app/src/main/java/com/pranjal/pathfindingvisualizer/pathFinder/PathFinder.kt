@@ -1,4 +1,4 @@
-package com.example.pathfindingvisualizer.pathFinder
+package com.pranjal.pathfindingvisualizer.pathFinder
 
 import BFS
 import DFS

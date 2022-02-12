@@ -1,4 +1,4 @@
-import com.example.pathfindingvisualizer.pathFinder.PathFinder
+import com.pranjal.pathfindingvisualizer.pathFinder.PathFinder
 import kotlinx.coroutines.delay
 
 class DFS(rows: Int, cols: Int) {

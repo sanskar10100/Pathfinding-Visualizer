@@ -91,7 +91,7 @@
     </LinearLayout>
 
 
-    <com.example.pathfindingvisualizer.pathBoard.PathGrid
+    <com.pranjal.pathfindingvisualizer.pathBoard.PathGrid
         android:id="@+id/pathGrid"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

@@ -1,4 +1,4 @@
-package com.example.pathfindingvisualizer.pathBoard
+package com.pranjal.pathfindingvisualizer.pathBoard
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -9,15 +9,15 @@ import android.graphics.RectF
 import android.util.AttributeSet
 import android.view.MotionEvent
 import android.view.View
-import com.example.pathfindingvisualizer.R
-import com.example.pathfindingvisualizer.pathFinder.PathFinder
-import com.example.pathfindingvisualizer.pathFinder.PathFinder.Companion.EMPTY_CELL_CODE
-import com.example.pathfindingvisualizer.pathFinder.PathFinder.Companion.END_CELL_CODE
-import com.example.pathfindingvisualizer.pathFinder.PathFinder.Companion.EXPLORE_CELL_CODE
-import com.example.pathfindingvisualizer.pathFinder.PathFinder.Companion.EXPLORE_HEAD_CELL_CODE
-import com.example.pathfindingvisualizer.pathFinder.PathFinder.Companion.FINAL_PATH_CELL_CODE
-import com.example.pathfindingvisualizer.pathFinder.PathFinder.Companion.OBSTACLE_CELL_CODE
-import com.example.pathfindingvisualizer.pathFinder.PathFinder.Companion.START_CELL_CODE
+import com.pranjal.pathfindingvisualizer.R
+import com.pranjal.pathfindingvisualizer.pathFinder.PathFinder
+import com.pranjal.pathfindingvisualizer.pathFinder.PathFinder.Companion.EMPTY_CELL_CODE
+import com.pranjal.pathfindingvisualizer.pathFinder.PathFinder.Companion.END_CELL_CODE
+import com.pranjal.pathfindingvisualizer.pathFinder.PathFinder.Companion.EXPLORE_CELL_CODE
+import com.pranjal.pathfindingvisualizer.pathFinder.PathFinder.Companion.EXPLORE_HEAD_CELL_CODE
+import com.pranjal.pathfindingvisualizer.pathFinder.PathFinder.Companion.FINAL_PATH_CELL_CODE
+import com.pranjal.pathfindingvisualizer.pathFinder.PathFinder.Companion.OBSTACLE_CELL_CODE
+import com.pranjal.pathfindingvisualizer.pathFinder.PathFinder.Companion.START_CELL_CODE
 import kotlin.math.abs
 import kotlin.math.ceil
 import kotlin.math.min
