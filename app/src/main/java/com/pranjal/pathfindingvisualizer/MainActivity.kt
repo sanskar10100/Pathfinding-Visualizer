@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
         setContentView(R.layout.activity_main)
 
         // Instant app test code
-        GlobalScope.launch {
+        GlobalScope.launch(Dispatchers.Main) {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                 if (packageManager.isInstantApp) {
                     Toast.makeText(this@MainActivity, "App running in instant mode", Toast.LENGTH_LONG).show()
