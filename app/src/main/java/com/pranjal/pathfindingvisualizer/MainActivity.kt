@@ -1,15 +1,19 @@
 package com.pranjal.pathfindingvisualizer
 
 import android.graphics.Color
+import android.os.Build
 import android.os.Bundle
 import android.view.Gravity
 import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
+import com.google.android.gms.instantapps.InstantApps
+import com.google.android.material.snackbar.Snackbar
 import com.pranjal.pathfindingvisualizer.pathBoard.PathGrid
 import com.pranjal.pathfindingvisualizer.pathFinder.PathFinder
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
@@ -22,6 +26,18 @@ class MainActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        // Instant app test code
+        GlobalScope.launch {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                if (packageManager.isInstantApp) {
+                    Toast.makeText(this@MainActivity, "App running in instant mode", Toast.LENGTH_LONG).show()
+                    delay(5000)
+                    Toast.makeText(this@MainActivity, "Received intent action: ${intent.action}, data: ${intent.data}", Toast.LENGTH_LONG).show()
+                }
+            } else {
+                Toast.makeText(this@MainActivity, "No instant apps support", Toast.LENGTH_SHORT).show()
+            }
+        }
 
         setSpeedSpinner()
         setAlgoSpinner()
