@@ -32,7 +32,6 @@ android {
     productFlavors {
         instant {
             dimension 'experience'
-            applicationIdSuffix '.instant'
             versionCode 2
             versionName '0.0.1'
             versionNameSuffix '-instant'
@@ -41,7 +40,6 @@ android {
             dimension 'experience'
             versionCode 100
             versionName '0.1'
-            applicationIdSuffix '.release'
             versionNameSuffix '-release'
         }
     }
