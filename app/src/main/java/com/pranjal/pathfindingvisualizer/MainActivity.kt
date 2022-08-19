@@ -9,6 +9,8 @@ import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.gms.instantapps.InstantApps
 import com.google.android.material.snackbar.Snackbar
+import com.google.firebase.dynamiclinks.ktx.dynamicLinks
+import com.google.firebase.ktx.Firebase
 import com.pranjal.pathfindingvisualizer.pathBoard.PathGrid
 import com.pranjal.pathfindingvisualizer.pathFinder.PathFinder
 import kotlinx.coroutines.Dispatchers
@@ -37,6 +39,19 @@ class MainActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
             } else {
                 Toast.makeText(this@MainActivity, "No instant apps support", Toast.LENGTH_SHORT).show()
             }
+
+            Firebase
+                .dynamicLinks
+                .getDynamicLink(intent)
+                .addOnSuccessListener {
+                    if (it != null) {
+                        val deepLink = it.link
+                        Toast.makeText(this@MainActivity, "Firebase Deep link: $deepLink", Toast.LENGTH_LONG).show()
+                    }
+                }
+                .addOnFailureListener {
+                    Toast.makeText(this@MainActivity, "Failed to get Firebase Deep link", Toast.LENGTH_LONG).show()
+                }
         }
 
         setSpeedSpinner()
